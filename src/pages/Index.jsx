@@ -1,13 +1,122 @@
-import React from 'react'
-
-const PageBox = ({ color, title }) => (
-  <div className='flex items-center justify-center w-full'>
-    <div className={`w-[60vmin] h-[60vmin] rounded-lg ${color} flex items-center justify-center`}>
-      <h1 className='text-white text-3xl'>{title}</h1>
-    </div>
-  </div>
-)
+import React, { useEffect, useState, useRef } from 'react'
 
 export default function Index() {
-  return <PageBox color='bg-red-500' title='Index Page' />
+  // % relative to the inner game area
+  const [player, setPlayer] = useState({ x: 50, y: 50 })
+  const [target, setTarget] = useState(() => ({ x: 20 + Math.random() * 60, y: 20 + Math.random() * 60 }))
+  const [score, setScore] = useState(0)
+
+  const keys = useRef({})
+  const rafRef = useRef(null)
+  const lastRef = useRef(null)
+
+  const playerSize = 6 // % of game area
+  const targetSize = 4 // % of game area
+  const speed = 35 // % per second
+
+  useEffect(() => {
+    const onKeyDown = e => {
+      const k = e.key.toLowerCase()
+      if (['arrowleft', 'arrowright', 'arrowup', 'arrowdown', 'a', 's', 'd', 'w'].includes(k)) {
+        keys.current[k] = true
+        e.preventDefault()
+      }
+    }
+    const onKeyUp = e => {
+      const k = e.key.toLowerCase()
+      if (keys.current[k]) keys.current[k] = false
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    window.addEventListener('keyup', onKeyUp)
+
+    return () => {
+      window.removeEventListener('keydown', onKeyDown)
+      window.removeEventListener('keyup', onKeyUp)
+    }
+  }, [])
+
+  useEffect(() => {
+    function loop(ts) {
+      if (!lastRef.current) lastRef.current = ts
+      const dt = (ts - lastRef.current) / 1000
+      lastRef.current = ts
+
+      //Movement direction
+      let dx = 0
+      let dy = 0
+      if (keys.current['arrowleft'] || keys.current['a']) dx -= 1
+      if (keys.current['arrowright'] || keys.current['d']) dx += 1
+      if (keys.current['arrowup'] || keys.current['w']) dy -= 1
+      if (keys.current['arrowdown'] || keys.current['s']) dy += 1
+
+      if (dx !== 0 || dy !== 0) {
+        //Normalize and move
+        const mag = Math.hypot(dx, dy)
+        dx = (dx / mag) * speed * dt
+        dy = (dy / mag) * speed * dt
+
+        setPlayer(p => {
+          const half = playerSize / 2
+          const min = half
+          const max = 100 - half
+          const nx = Math.max(min, Math.min(max, p.x + dx))
+          const ny = Math.max(min, Math.min(max, p.y + dy))
+          return { x: nx, y: ny }
+        })
+      }
+
+      //basic collision detection
+      setPlayer(p => {
+        const dxC = p.x - target.x
+        const dyC = p.y - target.y
+        const dist = Math.hypot(dxC, dyC)
+        const collideDist = (playerSize + targetSize) / 2
+        if (dist <= collideDist) {
+          setScore(s => s + 1)
+          setTarget({ x: 10 + Math.random() * 80, y: 10 + Math.random() * 80 })
+        }
+        return p
+      })
+
+      rafRef.current = requestAnimationFrame(loop)
+    }
+
+    rafRef.current = requestAnimationFrame(loop)
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current)
+      lastRef.current = null
+    }
+  }, [target])
+
+  return (
+    <div className='flex items-center justify-center w-full'>
+      <div className={`w-[60vmin] h-[60vmin] rounded-lg bg-red-500 flex items-center justify-center`}>
+        {/* game-area */}
+        <div className='w-[85%] h-[85%] bg-black rounded-lg relative overflow-hidden'>
+          {/* header centered horizontally */}
+          <div className='absolute top-3 left-1/2 -translate-x-1/2 text-center text-white/90'>
+            <div className='text-lg font-semibold'>Square demo game</div>
+            <div className='text-sm'>Move with WSDA</div>
+          </div>
+
+          <div className='absolute top-3 right-3 text-white/80 text-sm'>Score: {score}</div>
+
+          {/* target */}
+          <div
+            aria-hidden
+            style={{ left: `${target.x}%`, top: `${target.y}%`, width: `${targetSize}%`, height: `${targetSize}%` }}
+            className='absolute -translate-x-1/2 -translate-y-1/2 bg-red-400 rounded-full border-2 border-white'
+          />
+
+          {/* player */}
+          <div
+            aria-hidden
+            style={{ left: `${player.x}%`, top: `${player.y}%`, width: `${playerSize}%`, height: `${playerSize}%` }}
+            className='absolute -translate-x-1/2 -translate-y-1/2 bg-white rounded'
+          />
+        </div>
+      </div>
+    </div>
+  )
 }

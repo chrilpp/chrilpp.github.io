@@ -3,7 +3,7 @@ import React from 'react'
 const PageBox = ({ color, title }) => (
   <div className='flex items-center justify-center w-full'>
     <div className={`w-[60vmin] h-[60vmin] rounded-lg ${color} flex items-center justify-center`}>
-      <h1 className='text-white text-3xl'>{title}</h1>
+      <a className='text-white'>Boy trying out some react as a game dev</a>
     </div>
   </div>
 )
