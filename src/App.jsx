@@ -27,7 +27,7 @@ function Root() {
     <>
       <header className='absolute inset-x-0 top-0 z-50' />
       <nav className='h-16 flex items-center justify-center mb-4'>
-        <a href='index' className='mx-4'>
+        <a href='index' className='mx-1'>
           Index
         </a>
         <a href='about' className='mx-4'>
@@ -78,7 +78,10 @@ const router = createBrowserRouter(
       <Route path='about' element={<div>About Page</div>} />
       <Route path='media' element={<div>Media Page</div>} />
     </Route>
-  )
+  ),
+  {
+    basename: '/color-converter-r',
+  }
 )
 
 export default function App() {
