@@ -8,7 +8,7 @@ export default function Navbar() {
     <header className='h-16 flex items-center justify-center border-b border-gray-800'>
       <nav>
         <NavLink to='/' className={linkClass} end>
-          Index
+          Start
         </NavLink>
         <NavLink to='/color-converter' className={linkClass}>
           Color Converter
