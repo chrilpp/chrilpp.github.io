@@ -10,6 +10,9 @@ export default function Navbar() {
         <NavLink to='/' className={linkClass} end>
           Index
         </NavLink>
+        <NavLink to='/color-converter' className={linkClass}>
+          Color Converter
+        </NavLink>
         <NavLink to='/about' className={linkClass}>
           About
         </NavLink>

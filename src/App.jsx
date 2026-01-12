@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar'
 import Index from './pages/Index'
 import About from './pages/About'
 import Media from './pages/Media'
+import ColorConverter from './pages/ColorConverter'
 import './App.css'
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
             <Route path='/index' element={<Index />} />
             <Route path='/about' element={<About />} />
             <Route path='/media' element={<Media />} />
+            <Route path='/color-converter' element={<ColorConverter />} />
           </Routes>
         </main>
       </div>
