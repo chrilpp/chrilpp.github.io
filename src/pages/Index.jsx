@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
+import PageBox from '../Components/PageBox.jsx'
 
 export default function Index() {
   // % relative to the inner game area
@@ -90,7 +91,7 @@ export default function Index() {
   }, [target])
 
   return (
-    <div className='flex items-center justify-center w-full'>
+    <PageBox>
       <div className={`w-[60vmin] h-[60vmin] rounded-lg bg-red-500 flex items-center justify-center`}>
         {/* game-area */}
         <div className='w-[85%] h-[85%] bg-black rounded-lg relative overflow-hidden'>
@@ -117,6 +118,6 @@ export default function Index() {
           />
         </div>
       </div>
-    </div>
+    </PageBox>
   )
 }

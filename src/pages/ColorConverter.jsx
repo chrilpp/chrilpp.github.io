@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react'
+import PageBox from '../Components/PageBox.jsx'
 
 function hexToRgb(hex) {
   const h = hex.replace('#', '')
@@ -19,7 +20,7 @@ export default function ColorConverter() {
   const rgbPercent = `rgb(${((r / 255) * 100).toFixed(1)}%, ${((g / 255) * 100).toFixed(1)}%, ${((b / 255) * 100).toFixed(1)}%)`
 
   return (
-    <div className='flex items-center justify-center w-full'>
+    <PageBox>
       <div className={`w-[60vmin] h-[60vmin] rounded-lg ${color ? '' : ''} flex flex-col items-center justify-center gap-6`}>
         <div className='w-full h-full rounded-lg flex items-center justify-center' style={{ background: color }}>
           <div className='bg-black/30 p-4 rounded text-center'>
@@ -35,6 +36,6 @@ export default function ColorConverter() {
           <input className='bg-transparent border border-gray-700 text-white px-3 py-1 rounded' value={hex} onChange={e => setColor(e.target.value)} />
         </div>
       </div>
-    </div>
+    </PageBox>
   )
 }
