@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import PageBox from '../Components/PageBox.jsx'
+import ContentContainer from '../Components/ContentContainer.jsx'
 
 export default function Index() {
   // % relative to the inner game area
@@ -91,33 +91,31 @@ export default function Index() {
   }, [target])
 
   return (
-    <PageBox>
-      <div className={`w-[60vmin] h-[60vmin] rounded-lg bg-red-500 flex items-center justify-center`}>
-        {/* game-area */}
-        <div className='w-[85%] h-[85%] bg-black rounded-lg relative overflow-hidden'>
-          {/* header centered horizontally */}
-          <div className='absolute top-3 left-1/2 -translate-x-1/2 text-center text-white/90'>
-            <div className='text-lg font-semibold'>Square demo game</div>
-            <div className='text-sm'>Move with WSDA</div>
-          </div>
-
-          <div className='absolute top-3 right-3 text-white/80 text-sm'>Score: {score}</div>
-
-          {/* target */}
-          <div
-            aria-hidden
-            style={{ left: `${target.x}%`, top: `${target.y}%`, width: `${targetSize}%`, height: `${targetSize}%` }}
-            className='absolute -translate-x-1/2 -translate-y-1/2 bg-red-400 rounded-full border-2 border-white'
-          />
-
-          {/* player */}
-          <div
-            aria-hidden
-            style={{ left: `${player.x}%`, top: `${player.y}%`, width: `${playerSize}%`, height: `${playerSize}%` }}
-            className='absolute -translate-x-1/2 -translate-y-1/2 bg-white rounded'
-          />
+    <ContentContainer>
+      {/* game-area */}
+      <div className='w-[60vmin] h-[60vmin] bg-red-600 rounded-lg relative overflow-hidden'>
+        {/* header centered horizontally */}
+        <div className='absolute top-3 left-1/2 -translate-x-1/2 text-center text-white/90'>
+          <div className='text-lg font-semibold'>Square demo game</div>
+          <div className='text-sm'>Move with WSDA</div>
         </div>
+
+        <div className='absolute top-3 right-3 text-white/80 text-sm'>Score: {score}</div>
+
+        {/* target */}
+        <div
+          aria-hidden
+          style={{ left: `${target.x}%`, top: `${target.y}%`, width: `${targetSize}%`, height: `${targetSize}%` }}
+          className='absolute -translate-x-1/2 -translate-y-1/2 bg-red-400 rounded-full border-2 border-white'
+        />
+
+        {/* player */}
+        <div
+          aria-hidden
+          style={{ left: `${player.x}%`, top: `${player.y}%`, width: `${playerSize}%`, height: `${playerSize}%` }}
+          className='absolute -translate-x-1/2 -translate-y-1/2 bg-white rounded'
+        />
       </div>
-    </PageBox>
+    </ContentContainer>
   )
 }

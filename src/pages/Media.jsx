@@ -1,11 +1,11 @@
 import React from 'react'
-import PageBox from '../Components/PageBox.jsx'
+import ContentContainer from '../Components/ContentContainer.jsx'
 
 const dotUrl = new URL('/dot3.png', import.meta.url).href
 
 export default function Media() {
   return (
-    <PageBox>
+    <ContentContainer>
       <div className={`w-[60vmin] h-[60vmin] rounded-lg bg-blue-600 flex items-center justify-center`}>
         <div className='flex flex-col items-center gap-4'>
           <div className='grid grid-cols-5 gap-3'>
@@ -16,6 +16,6 @@ export default function Media() {
           <a className='text-white'>A white dot!</a>
         </div>
       </div>
-    </PageBox>
+    </ContentContainer>
   )
 }
