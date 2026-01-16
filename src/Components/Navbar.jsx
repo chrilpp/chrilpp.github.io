@@ -1,11 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import './Navbar.css'
 
-const linkClass = ({ isActive }) => (isActive ? 'text-white font-semibold' : 'text-gray-400') + ' px-3 py-1 rounded'
+const linkClass = ({ isActive }) => `navbar-link ${isActive ? 'active' : ''}`
 
 export default function Navbar() {
   return (
-    <header className='h-16 flex items-center justify-center border-b border-gray-800'>
+    <header className='navbar-header'>
       <nav>
         <NavLink to='/' className={linkClass} end>
           Start

@@ -1,0 +1,22 @@
+.navbar-header {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-width: 1px;
+  border-color: #1f2937;
+}
+
+.navbar-link {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-radius: 0.25rem;
+  color: #9ca3af;
+}
+
+.navbar-link.active {
+  color: #ffffff;
+  font-weight: 600;
+}
