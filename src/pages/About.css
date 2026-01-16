@@ -1,0 +1,14 @@
+.about-container {
+  width: 60vmin;
+  height: 60vmin;
+  border-radius: 0.5rem;
+  background-color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-link {
+  color: #ffffff;
+  text-align: center;
+}

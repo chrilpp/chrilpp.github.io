@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import ContentContainer from '../Components/ContentContainer.jsx'
+import './ColorConverter.css'
 
 function hexToRgb(hex) {
   const h = hex.replace('#', '')
@@ -21,19 +22,19 @@ export default function ColorConverter() {
 
   return (
     <ContentContainer>
-      <div className={`w-[60vmin] h-[60vmin] rounded-lg ${color ? '' : ''} flex flex-col items-center justify-center gap-6`}>
-        <div className='w-full h-full rounded-lg flex items-center justify-center' style={{ background: color }}>
-          <div className='bg-black/30 p-4 rounded text-center'>
-            <h2 className='text-white text-2xl mb-2'>Color Converter</h2>
-            <div className='text-white'>{hex}</div>
-            <div className='text-white'>{rgb}</div>
-            <div className='text-white'>{rgbPercent}</div>
+      <div className='color-converter-container'>
+        <div className='color-display' style={{ background: color }}>
+          <div className='color-info'>
+            <h2 className='color-title'>Color Converter</h2>
+            <div className='color-value'>{hex}</div>
+            <div className='color-value'>{rgb}</div>
+            <div className='color-value'>{rgbPercent}</div>
           </div>
         </div>
 
-        <div className='mt-4 flex items-center gap-4'>
-          <input aria-label='Pick a color' type='color' value={color} onChange={e => setColor(e.target.value)} className='w-12 h-12 p-0 border-0' />
-          <input className='bg-transparent border border-gray-700 text-white px-3 py-1 rounded' value={hex} onChange={e => setColor(e.target.value)} />
+        <div className='controls'>
+          <input aria-label='Pick a color' type='color' value={color} onChange={e => setColor(e.target.value)} className='color-picker' />
+          <input className='hex-input' value={hex} onChange={e => setColor(e.target.value)} />
         </div>
       </div>
     </ContentContainer>

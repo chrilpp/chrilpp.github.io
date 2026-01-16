@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import ContentContainer from '../Components/ContentContainer.jsx'
+import './Index.css'
 
 export default function Index() {
   // % relative to the inner game area
@@ -93,28 +94,20 @@ export default function Index() {
   return (
     <ContentContainer>
       {/* game-area */}
-      <div className='w-[60vmin] h-[60vmin] bg-red-600 rounded-lg relative overflow-hidden'>
+      <div className='game-area'>
         {/* header centered horizontally */}
-        <div className='absolute top-3 left-1/2 -translate-x-1/2 text-center text-white/90'>
-          <div className='text-lg font-semibold'>Square demo game</div>
-          <div className='text-sm'>Move with WSDA</div>
+        <div className='game-header'>
+          <div className='game-title'>Square demo game</div>
+          <div className='game-instructions'>Move with WSDA</div>
         </div>
 
-        <div className='absolute top-3 right-3 text-white/80 text-sm'>Score: {score}</div>
+        <div className='game-score'>Score: {score}</div>
 
         {/* target */}
-        <div
-          aria-hidden
-          style={{ left: `${target.x}%`, top: `${target.y}%`, width: `${targetSize}%`, height: `${targetSize}%` }}
-          className='absolute -translate-x-1/2 -translate-y-1/2 bg-red-400 rounded-full border-2 border-white'
-        />
+        <div aria-hidden style={{ left: `${target.x}%`, top: `${target.y}%`, width: `${targetSize}%`, height: `${targetSize}%` }} className='target' />
 
         {/* player */}
-        <div
-          aria-hidden
-          style={{ left: `${player.x}%`, top: `${player.y}%`, width: `${playerSize}%`, height: `${playerSize}%` }}
-          className='absolute -translate-x-1/2 -translate-y-1/2 bg-white rounded'
-        />
+        <div aria-hidden style={{ left: `${player.x}%`, top: `${player.y}%`, width: `${playerSize}%`, height: `${playerSize}%` }} className='player' />
       </div>
     </ContentContainer>
   )
