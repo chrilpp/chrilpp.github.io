@@ -7,19 +7,25 @@ const linkClass = ({ isActive }) => `navbar-link ${isActive ? 'active' : ''}`
 export default function Navbar() {
   return (
     <header className='navbar-header'>
-      <nav>
-        <NavLink to='/' className={linkClass} end>
-          Start
-        </NavLink>
-        <NavLink to='/color-converter' className={linkClass}>
-          Color Converter
-        </NavLink>
-        <NavLink to='/about' className={linkClass}>
-          About
-        </NavLink>
-        <NavLink to='/media' className={linkClass}>
-          Media
-        </NavLink>
+      <nav className='navbar-nav'>
+        <section className='left'>
+          <img src='box.png' className='boxImage' />
+        </section>
+
+        <section className='right'>
+          <NavLink to='/' className={linkClass} end>
+            Start
+          </NavLink>
+          <NavLink to='/color-converter' className={linkClass}>
+            Color Converter
+          </NavLink>
+          <NavLink to='/about' className={linkClass}>
+            About
+          </NavLink>
+          <NavLink to='/media' className={linkClass}>
+            Media
+          </NavLink>
+        </section>
       </nav>
     </header>
   )

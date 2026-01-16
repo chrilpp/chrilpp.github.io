@@ -95,17 +95,9 @@ export default function Index() {
     <ContentContainer>
       {/* game-area */}
       <div className='game-area'>
-        {/* header centered horizontally */}
-        <div className='game-header'>
-          <div className='game-title'>Square demo game</div>
-          <div className='game-instructions'>Move with WSDA</div>
-        </div>
-
         <div className='game-score'>Score: {score}</div>
-
         {/* target */}
         <div aria-hidden style={{ left: `${target.x}%`, top: `${target.y}%`, width: `${targetSize}%`, height: `${targetSize}%` }} className='target' />
-
         {/* player */}
         <div aria-hidden style={{ left: `${player.x}%`, top: `${player.y}%`, width: `${playerSize}%`, height: `${playerSize}%` }} className='player' />
       </div>

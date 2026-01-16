@@ -3,8 +3,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom-width: 1px;
-  border-color: #1f2937;
+  border-bottom-width: 4px;
+  border-color: #4a7a96;
+}
+
+.navbar-nav {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 .navbar-link {
@@ -19,4 +28,18 @@
 .navbar-link.active {
   color: #ffffff;
   font-weight: 600;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 10%;
+  height: 100%;
+  overflow: hidden;
+}
+.right {
+  display: flex;
+  padding-right: 10%;
 }

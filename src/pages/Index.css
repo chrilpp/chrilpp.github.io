@@ -1,30 +1,10 @@
 .game-area {
   width: 60vmin;
   height: 60vmin;
-  background-color: #dc2626;
+  background-color: #333f58;
   border-radius: 0.5rem;
   position: relative;
   overflow: hidden;
-}
-
-.game-header {
-  position: absolute;
-  top: 0.75rem;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.game-title {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 600;
-}
-
-.game-instructions {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .game-score {
@@ -39,7 +19,7 @@
 .target {
   position: absolute;
   transform: translate(-50%, -50%);
-  background-color: #f87171;
+  background-color: #292831;
   border-radius: 9999px;
   border: 2px solid #ffffff;
 }
@@ -47,6 +27,6 @@
 .player {
   position: absolute;
   transform: translate(-50%, -50%);
-  background-color: #ffffff;
+  background-color: #fbbbad;
   border-radius: 0.25rem;
 }
