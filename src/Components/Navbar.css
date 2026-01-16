@@ -3,13 +3,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom-width: 4px;
-  border-color: #4a7a96;
 }
 
 .navbar-nav {
   display: flex;
   height: 100%;
+  width: 20%;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -38,6 +37,7 @@
   padding-left: 10%;
   height: 100%;
   overflow: hidden;
+  flex-shrink: 0;
 }
 .right {
   display: flex;

@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react'
 import ContentContainer from '../Components/ContentContainer.jsx'
-import './Index.css'
+import './Start.css'
 
-export default function Index() {
+export default function Start() {
   // % relative to the inner game area
   const [player, setPlayer] = useState({ x: 50, y: 50 })
   const [target, setTarget] = useState(() => ({ x: 20 + Math.random() * 60, y: 20 + Math.random() * 60 }))
@@ -12,8 +12,8 @@ export default function Index() {
   const rafRef = useRef(null)
   const lastRef = useRef(null)
 
-  const playerSize = 6 // % of game area
-  const targetSize = 4 // % of game area
+  const playerSize = 20 // % of game area
+  const targetSize = 10 // % of game area
   const speed = 35 // % per second
 
   useEffect(() => {
@@ -93,13 +93,20 @@ export default function Index() {
 
   return (
     <ContentContainer>
-      {/* game-area */}
-      <div className='game-area'>
-        <div className='game-score'>Score: {score}</div>
-        {/* target */}
-        <div aria-hidden style={{ left: `${target.x}%`, top: `${target.y}%`, width: `${targetSize}%`, height: `${targetSize}%` }} className='target' />
-        {/* player */}
-        <div aria-hidden style={{ left: `${player.x}%`, top: `${player.y}%`, width: `${playerSize}%`, height: `${playerSize}%` }} className='player' />
+      <div className='game-content'>
+        {/* game-area */}
+        <section className='game-info'>
+          <img src='logo_cropped.png' className='logoImage' />
+          <p className='game-instructions'>Out on Steam Jan 2026</p>
+          <img src='push3.gif' className='pushImage'></img>
+        </section>
+        <div className='game-area'>
+          <div className='game-score'>Score: {score}</div>
+          {/* target */}
+          <div aria-hidden style={{ left: `${target.x}%`, top: `${target.y}%`, width: `${targetSize}%`, height: `${targetSize}%` }} className='target' />
+          {/* player */}
+          <div aria-hidden style={{ left: `${player.x}%`, top: `${player.y}%`, width: `${playerSize}%`, height: `${playerSize}%` }} className='player' />
+        </div>
       </div>
     </ContentContainer>
   )

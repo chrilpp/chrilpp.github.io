@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './Components/Navbar'
-import Index from './pages/Index'
+import Start from './pages/Start'
 import About from './pages/About'
 import Media from './pages/Media'
 import ColorConverter from './pages/ColorConverter'
@@ -11,8 +11,8 @@ export default function App() {
     <BrowserRouter basename='/color-converter-r'>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Index />} />
-        <Route path='/index' element={<Index />} />
+        <Route path='/' element={<Start />} />
+        <Route path='/start' element={<Start />} />
         <Route path='/about' element={<About />} />
         <Route path='/media' element={<Media />} />
         <Route path='/color-converter' element={<ColorConverter />} />
