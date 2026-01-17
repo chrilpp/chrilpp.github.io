@@ -43,6 +43,7 @@ body {
   width: 100%;
   height: calc(80vh - 7rem);
   position: relative;
+  overflow: hidden;
 }
 
 h1 {
