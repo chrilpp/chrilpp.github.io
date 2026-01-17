@@ -26,10 +26,6 @@ a:hover {
   color: #ee8695;
 }
 
-footer {
-  height: 7rem;
-}
-
 body {
   margin: 0;
   display: flex;
@@ -81,4 +77,8 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.page-wrapper {
+  overflow: auto;
 }

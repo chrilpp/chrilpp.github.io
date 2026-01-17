@@ -65,9 +65,6 @@ export default function AnimatedRoutes() {
           />
         </Routes>
       </AnimatePresence>
-      <footer className='app-footer'>
-        <p>© 2026 Christian Thulin Pfeifer</p>
-      </footer>
     </div>
   )
 }

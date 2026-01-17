@@ -49,5 +49,6 @@
 @media (max-width: 1080px) {
   .right {
     flex-wrap: wrap;
+    width: 40%;
   }
 }
