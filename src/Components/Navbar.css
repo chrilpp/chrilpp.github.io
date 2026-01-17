@@ -1,5 +1,5 @@
 .navbar-header {
-  height: 4rem;
+  height: 7rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@
 .navbar-link {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  padding-top: 0.25rem;
+  padding-top: 0.1rem;
   padding-bottom: 0.25rem;
   border-radius: 0.25rem;
   color: #9ca3af;
@@ -38,8 +38,15 @@
   flex-shrink: 0;
 }
 
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 @media (max-width: 1080px) {
-  .navbar-header {
-    flex-direction: column;
+  .right {
+    flex-wrap: wrap;
   }
 }
