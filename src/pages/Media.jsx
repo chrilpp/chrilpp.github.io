@@ -5,17 +5,22 @@ import './Media.css'
 const dotUrl = new URL('/dot3.png', import.meta.url).href
 
 export default function Media() {
+  const videos = ['https://www.youtube.com/embed/0G228jVdqtE', 'https://www.youtube.com/embed/9fQWvPdVhGM', 'https://www.youtube.com/embed/m77iSMmFhMw']
+
   return (
     <ContentContainer>
-      <div className='media-container'>
-        <div className='media-content'>
-          <div className='dot-grid'>
-            {Array.from({ length: 25 }).map((_, i) => (
-              <img key={i} src={dotUrl} alt={`dot-${i}`} className='dot-image' />
-            ))}
+      <div className='video-grid'>
+        {videos.map((src, i) => (
+          <div key={i} className='video-frame'>
+            <iframe
+              src={src}
+              title={`video-${i}`}
+              frameBorder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              allowFullScreen
+            />
           </div>
-          <a className='media-text'>A white dot!</a>
-        </div>
+        ))}
       </div>
     </ContentContainer>
   )
