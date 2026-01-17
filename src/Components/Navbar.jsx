@@ -17,7 +17,7 @@ export default function Navbar() {
             Start
           </NavLink>
           <NavLink to='/color-converter' className={linkClass}>
-            Color-converter
+            Color Converter
           </NavLink>
           <NavLink to='/about' className={linkClass}>
             About

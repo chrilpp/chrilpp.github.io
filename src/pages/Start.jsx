@@ -96,7 +96,7 @@ export default function Start() {
       <div className='game-content'>
         {/* game-area */}
         <section className='game-info'>
-          <p className='game-instructions'>Portfolio Page</p>
+          <p className='game-instructions'>Portfolio Page WIP</p>
           <p className='game-instructions'>Christian Thulin Pfeifer - Developer</p>
           <a href='https://www.linkedin.com/in/christian-thulin-pfeifer-335226151' target='_blank' rel='noopener noreferrer' className='game-instructions'>
             LinkedIn

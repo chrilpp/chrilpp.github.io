@@ -12,7 +12,7 @@ function hexToRgb(hex) {
 }
 
 export default function ColorConverter() {
-  const [color, setColor] = useState('#F6E209')
+  const [color, setColor] = useState('#df8c00')
 
   const { r, g, b } = useMemo(() => hexToRgb(color), [color])
 
