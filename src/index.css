@@ -26,6 +26,10 @@ a:hover {
   color: #ee8695;
 }
 
+footer {
+  height: 7rem;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -39,7 +43,6 @@ body {
   width: 100%;
   height: calc(80vh - 7rem);
   position: relative;
-  overflow: hidden;
 }
 
 h1 {

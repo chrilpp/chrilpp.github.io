@@ -8,9 +8,6 @@ export default function App() {
     <BrowserRouter basename='/color-converter-r'>
       <Navbar />
       <AnimatedRoutes />
-      <footer className='app-footer'>
-        <p>© 2026 Christian Thulin Pfeifer</p>
-      </footer>
     </BrowserRouter>
   )
 }

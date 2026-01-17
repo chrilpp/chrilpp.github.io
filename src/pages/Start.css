@@ -31,10 +31,10 @@
 
 .game-score {
   position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.875rem;
+  top: 1rem;
+  right: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
   line-height: 1.25rem;
 }
 

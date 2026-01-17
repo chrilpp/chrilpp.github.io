@@ -103,7 +103,6 @@ export default function Start() {
           </a>
         </section>
         <div className='game-area'>
-          <div className='game-score'>Score: {score}</div>
           {/* target */}
           <div aria-hidden style={{ left: `${target.x}%`, top: `${target.y}%`, width: `${targetSize}%`, height: `${targetSize}%` }} className='target' />
           {/* player */}
