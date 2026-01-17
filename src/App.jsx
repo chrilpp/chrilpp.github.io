@@ -17,6 +17,9 @@ export default function App() {
         <Route path='/media' element={<Media />} />
         <Route path='/color-converter' element={<ColorConverter />} />
       </Routes>
+      <footer className='app-footer'>
+        <p>© 2026 Christian Thulin Pfeifer</p>
+      </footer>
     </BrowserRouter>
   )
 }

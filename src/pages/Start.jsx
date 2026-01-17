@@ -12,8 +12,8 @@ export default function Start() {
   const rafRef = useRef(null)
   const lastRef = useRef(null)
 
-  const playerSize = 20 // % of game area
-  const targetSize = 10 // % of game area
+  const playerSize = 7 // % of game area
+  const targetSize = 7 // % of game area
   const speed = 35 // % per second
 
   useEffect(() => {
@@ -96,9 +96,11 @@ export default function Start() {
       <div className='game-content'>
         {/* game-area */}
         <section className='game-info'>
-          <img src='logo_cropped.png' className='logoImage' />
-          <p className='game-instructions'>Out on Steam Jan 2026</p>
-          <img src='push3.gif' className='pushImage'></img>
+          <p className='game-instructions'>Portfolio Page</p>
+          <p className='game-instructions'>Christian Thulin Pfeifer - Developer</p>
+          <a href='https://www.linkedin.com/in/christian-thulin-pfeifer-335226151' target='_blank' rel='noopener noreferrer' className='game-instructions'>
+            LinkedIn
+          </a>
         </section>
         <div className='game-area'>
           <div className='game-score'>Score: {score}</div>

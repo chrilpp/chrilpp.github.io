@@ -6,10 +6,10 @@ const linkClass = ({ isActive }) => `navbar-link ${isActive ? 'active' : ''}`
 
 export default function Navbar() {
   return (
-    <header className='navbar-header'>
+    <div className='navbar-header'>
       <nav className='navbar-nav'>
         <section className='left'>
-          <img src='box.png' className='boxImage' />
+          <img src='logo3.png' className='boxImage' width='200' height='200' />
         </section>
 
         <section className='right'>
@@ -27,6 +27,6 @@ export default function Navbar() {
           </NavLink>
         </section>
       </nav>
-    </header>
+    </div>
   )
 }

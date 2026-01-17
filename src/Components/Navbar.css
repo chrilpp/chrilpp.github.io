@@ -33,13 +33,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
-  padding-left: 10%;
   height: 100%;
   overflow: hidden;
   flex-shrink: 0;
 }
-.right {
-  display: flex;
-  padding-right: 10%;
+
+@media (max-width: 1080px) {
+  .navbar-header {
+    flex-direction: column;
+  }
 }

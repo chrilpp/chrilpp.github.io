@@ -4,13 +4,16 @@
   width: 80%;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  border: 2px solid #000;
+  border-radius: 5%;
+  gap: 2rem;
 }
 
 .game-area {
   width: 400px;
   height: 400px;
-  background-color: #333f58;
+  background-color: #d7ac64;
   border-radius: 0.5rem;
   position: relative;
   overflow: hidden;
@@ -22,9 +25,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
   margin-top: 2%;
   flex-shrink: 0;
+  gap: 1rem;
 }
 
 .game-score {
@@ -37,7 +40,7 @@
 }
 
 .logoImage {
-  height: 15vmin;
+  height: 20vmin;
   align-items: start;
 }
 
@@ -48,7 +51,7 @@
 .target {
   position: absolute;
   transform: translate(-50%, -50%);
-  background-color: #292831;
+  background-color: #1e110c;
   border-radius: 9999px;
   border: 2px solid #ffffff;
 }
@@ -56,12 +59,17 @@
 .player {
   position: absolute;
   transform: translate(-50%, -50%);
-  background-color: #fbbbad;
+  background-color: #d65709;
   border-radius: 0.25rem;
 }
 
 @media (max-width: 1080px) {
   .game-content {
     flex-direction: column;
+  }
+
+  .game-area {
+    width: 220px;
+    height: 220px;
   }
 }
