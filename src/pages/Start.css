@@ -10,8 +10,8 @@
 }
 
 .game-area {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   background-color: #d7ac64;
   border-radius: 0.5rem;
   position: relative;
@@ -68,7 +68,7 @@
   }
 
   .game-area {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
   }
 }

@@ -12,7 +12,7 @@ export default function Start() {
   const rafRef = useRef(null)
   const lastRef = useRef(null)
 
-  const playerSize = 7 // % of game area
+  const playerSize = 9 // % of game area
   const targetSize = 7 // % of game area
   const speed = 35 // % per second
 
