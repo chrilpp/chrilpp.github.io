@@ -5,7 +5,7 @@ import './Media.css'
 const dotUrl = new URL('/dot3.png', import.meta.url).href
 
 export default function Media() {
-  const videos = ['https://www.youtube.com/embed/0G228jVdqtE', 'https://www.youtube.com/embed/9fQWvPdVhGM', 'https://www.youtube.com/embed/m77iSMmFhMw']
+  const videos = ['https://www.youtube.com/embed/9fQWvPdVhGM', 'https://www.youtube.com/embed/m77iSMmFhMw', 'https://www.youtube.com/embed/0G228jVdqtE']
 
   return (
     <ContentContainer>

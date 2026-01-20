@@ -14,16 +14,16 @@ export default function Navbar() {
 
         <section className='right'>
           <NavLink to='/' className={linkClass} end>
-            Start
+            Index
           </NavLink>
           <NavLink to='/color-converter' className={linkClass}>
-            Color Converter
+            Tool: Color Converter
           </NavLink>
           <NavLink to='/about' className={linkClass}>
             About
           </NavLink>
           <NavLink to='/media' className={linkClass}>
-            Media
+            Vids
           </NavLink>
         </section>
       </nav>
