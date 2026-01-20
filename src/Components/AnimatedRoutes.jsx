@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Start from '../pages/Start'
 import About from '../pages/About'
 import Media from '../pages/Media'
+import SelectList from '../pages/SelectList'
 import ColorConverter from '../pages/ColorConverter'
 
 const pageVariants = {
@@ -60,6 +61,14 @@ export default function AnimatedRoutes() {
             element={
               <motion.div variants={pageVariants} initial='initial' animate='animate' exit='exit' transition={pageTransition}>
                 <ColorConverter />
+              </motion.div>
+            }
+          />
+          <Route
+            path='/list'
+            element={
+              <motion.div variants={pageVariants} initial='initial' animate='animate' exit='exit' transition={pageTransition}>
+                <SelectList />
               </motion.div>
             }
           />

@@ -25,6 +25,9 @@ export default function Navbar() {
           <NavLink to='/media' className={linkClass}>
             Vids
           </NavLink>
+          <NavLink to='/list' className={linkClass}>
+            List
+          </NavLink>
         </section>
       </nav>
     </div>
