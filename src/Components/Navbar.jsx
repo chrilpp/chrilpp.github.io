@@ -22,11 +22,11 @@ export default function Navbar() {
           <NavLink to='/about' className={linkClass}>
             About
           </NavLink>
+          <NavLink to='/list' className={linkClass}>
+            Grid-test
+          </NavLink>
           <NavLink to='/media' className={linkClass}>
             Vids
-          </NavLink>
-          <NavLink to='/list' className={linkClass}>
-            List
           </NavLink>
         </section>
       </nav>
