@@ -1,20 +1,20 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState } from 'react'
 import ContentContainer from '../Components/ContentContainer.jsx'
 import './ColorConverter.css'
 
 function hexToRgb(hex) {
-  const h = hex.replace('#', '')
-  const bigint = parseInt(h, 16)
-  const r = (bigint >> 16) & 255
-  const g = (bigint >> 8) & 255
-  const b = bigint & 255
-  return { r, g, b }
+  const clean = hex.replace('#', '')
+  return {
+    r: parseInt(clean.slice(0, 2), 16),
+    g: parseInt(clean.slice(2, 4), 16),
+    b: parseInt(clean.slice(4, 6), 16),
+  }
 }
 
 export default function ColorConverter() {
   const [color, setColor] = useState('#df8c00')
 
-  const { r, g, b } = useMemo(() => hexToRgb(color), [color])
+  const { r, g, b } = hexToRgb(color)
 
   const hex = color.toUpperCase()
   const rgb = `rgb(${r}, ${g}, ${b})`
