@@ -95,7 +95,7 @@ export default function Projects() {
   return (
     <ContentContainer>
       <div className='projects-container'>
-        <h1 className='projects-title'>My Work</h1>
+        <h1 className='projects-title'>Selected Projects</h1>
         <p className='projects-subtitle'>A selection of projects delivered both in collaborative teams and through solo development</p>
 
         <div className='projects-grid'>

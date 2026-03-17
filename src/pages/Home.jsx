@@ -8,15 +8,21 @@ export default function Home() {
   const featuredProjects = [
     {
       title: 'Touchgrind BMX 2',
-      description: 'Iconic BMX game from Illusion Labs.',
+      description: 'The iconic physics-driven BMX stunt game with unique two-finger controls, from Illusion Labs.',
+      rating: '4.5',
+      ratingPlatform: 'Google Play',
       tech: ['In-house Engine', 'C++', 'UI/UX'],
       link: 'https://play.google.com/store/apps/details?id=se.illusionlabs.touchgrindbmx2&hl=sv',
+      image: '/bmx2_s.jpg',
     },
     {
       title: 'Touchgrind Scooter',
-      description: 'Trick-based scooter game released at Illusion Labs. ',
+      description: 'The long-awaited scooter follow-up to BMX 2, bringing the same iconic two-finger controls to a whole new sport.',
+      rating: '4.7',
+      ratingPlatform: 'App Store',
       tech: ['In-house Engine', 'JavaScript', 'C++', 'UI/UX'],
       link: 'https://apps.apple.com/se/app/touchgrind-scooter/id1540937835',
+      image: '/scooter_s.jpg',
     },
   ]
 
@@ -32,7 +38,7 @@ export default function Home() {
               <p className='hero-description'>Specializing in polished, responsive player experiences with 5+ years of professional experience.</p>
               <p className='hero-highlight'>Contributed to titles with a combined 300M+ downloads worldwide.</p>
               <Link to='/projects' className='cta-button'>
-                View My Work
+                View Projects
               </Link>
             </div>
             <img src='/CVbild.jpg' alt='Christian Thulin Pfeifer' className='hero-image' />
@@ -45,18 +51,28 @@ export default function Home() {
           <div className='projects-grid'>
             {featuredProjects.map((project, index) => (
               <Card key={index} className='project-card'>
-                <h3 className='project-title'>{project.title}</h3>
-                <p className='project-description'>{project.description}</p>
-                <div className='tech-stack'>
-                  {project.tech.map((tech, i) => (
-                    <span key={i} className='tech-tag'>
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <a href={project.link} className='project-link'>
-                  View Game
+                <a href={project.link} className='project-image-link'>
+                  <div className='project-image'>
+                    <img src={project.image} alt={project.title} />
+                    {project.rating && (
+                      <div className='project-rating-badge'>
+                        <span className='rating-stars'>★ {project.rating}</span>
+                        <span className='rating-platform'>{project.ratingPlatform}</span>
+                      </div>
+                    )}
+                  </div>
                 </a>
+                <div className='project-content'>
+                  <h3 className='project-title'>{project.title}</h3>
+                  <p className='project-description'>{project.description}</p>
+                  <div className='tech-stack'>
+                    {project.tech.map((tech, i) => (
+                      <span key={i} className='tech-tag'>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </Card>
             ))}
           </div>
