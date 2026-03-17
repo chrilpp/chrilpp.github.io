@@ -18,7 +18,7 @@ export default function Projects() {
       description: 'Sokoban-inspired puzzle adventure introducing innovative mechanics layered on classic grid-based design. Solo-developed in Unity for PC/Steam.',
       tech: ['Unity', 'C#', 'Game Design'],
       link: 'https://store.steampowered.com/app/4319030/Kwartikum/',
-      image: '/push2.gif',
+      image: '/kwart_main_capsule.png',
     },
     {
       title: 'Touchgrind Scooter',
@@ -45,11 +45,12 @@ export default function Projects() {
       image: '/orbStriker.png',
     },
     {
-      title: 'Portfolio Website',
-      description: 'Modern responsive portfolio website built with React and CSS, featuring comprehensive showcase of professional game development projects and experience.',
-      tech: ['React', 'CSS'],
-      link: '#',
-      image: '/logo2.png',
+      title: 'Way of the Turtle',
+      description:
+        'Apple Arcade title where I contributed sound design for the final boss, and yes, also handled the mission-critical task of ordering company socks with the logo on them.',
+      tech: ['Sound Design', 'Production Support'],
+      link: 'https://www.youtube.com/watch?v=9GBv3i62hJA',
+      image: '/wayoftheturtle.png',
     },
   ]
 

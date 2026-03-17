@@ -2,3 +2,15 @@
   margin: 0 auto;
   text-align: center;
 }
+
+.site-footer {
+  margin-top: 2rem;
+  padding: 1.25rem 1rem 2rem;
+}
+
+.site-footer-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #a0aec0;
+  opacity: 0.9;
+}
