@@ -6,18 +6,19 @@ import './Projects.css'
 export default function Projects() {
   const projects = [
     {
+      title: 'Touchgrind BMX 3: Rivals',
+      description:
+        'Competitive BMX racing game developed and shipped at Illusion Labs for iOS/Android. Built in Unity with gameplay mechanics, UI systems, and monetization features.',
+      tech: ['Unity', 'C#', 'FMOD', 'UI/UX'],
+      link: 'https://play.google.com/store/apps/details?id=se.illusionlabs.tgx&hl=sv',
+      image: '/Bmx3.png',
+    },
+    {
       title: 'Kwartikum',
       description: 'Sokoban-inspired puzzle adventure introducing innovative mechanics layered on classic grid-based design. Solo-developed in Unity for PC/Steam.',
       tech: ['Unity', 'C#', 'Game Design'],
       link: 'https://store.steampowered.com/app/4319030/Kwartikum/',
       image: '/push2.gif',
-    },
-    {
-      title: 'Touchgrind BMX 3: Rivals',
-      description: 'Competitive BMX racing game developed and shipped at Illusion Labs for iOS/Android. Built in Unity with gameplay mechanics, UI systems, and monetization features.',
-      tech: ['Unity', 'C#', 'FMOD', 'UI'],
-      link: 'https://play.google.com/store/apps/details?id=se.illusionlabs.tgx&hl=sv',
-      image: '/Bmx3.png',
     },
     {
       title: 'Touchgrind Scooter',
@@ -29,7 +30,8 @@ export default function Projects() {
     },
     {
       title: 'Touchgrind BMX 2',
-      description: 'Iconic BMX simulation game at Illusion Labs for iOS/Android. Led major UI revamp in 2.0 update working closely with lead design, with ownership of the entire redesign task.',
+      description:
+        'Iconic BMX simulation game at Illusion Labs for iOS/Android. Led major UI revamp in 2.0 update working closely with lead design, with ownership of the entire redesign task.',
       tech: ['In-house Engine', 'C++', 'UI'],
       link: 'https://play.google.com/store/apps/details?id=se.illusionlabs.touchgrindbmx2&hl=sv',
       image: '/BMX2.png',
@@ -39,7 +41,7 @@ export default function Projects() {
       description:
         'Gameplay prototype currently in development at Typogun for iOS/Android. Team of six developers with focus on rapid prototyping, architecture design, and core gameplay systems.',
       tech: ['Unity', 'C#', 'Gameplay Systems'],
-      link: '#',
+      link: 'https://play.google.com/store/apps/details?id=se.typogun.orbstriker',
       image: '/orbStriker.png',
     },
     {
@@ -47,7 +49,7 @@ export default function Projects() {
       description: 'Modern responsive portfolio website built with React and CSS, featuring comprehensive showcase of professional game development projects and experience.',
       tech: ['React', 'CSS'],
       link: '#',
-      image: '/me.png',
+      image: '/logo2.png',
     },
   ]
 

@@ -9,11 +9,11 @@ export default function Media() {
   const videos = [
     { id: 'pEcc_QkSUwU', title: 'Touchgrind BMX 3 Gameplay Preview' },
     { id: '5fKSqonRlSA', title: 'Touchgrind BMX 2 Trailer' },
-    { id: 'y00MnXtYRAc', title: 'Sound Design Reel' },
     { id: '1QDnwDiYDkQ', title: 'Touchgrind Scooter Release Trailer' },
     { id: 'Mq0qSKOfT0g', title: 'Touchgrind BMX 2 – New Location: Heatstroke' },
     { id: '9GBv3i62hJA', title: 'Way of the Turtle – Part 2 Trailer' },
     { id: 'xhwgDoVRg6w', title: 'Orb Striker Trailer' },
+    { id: 'y00MnXtYRAc', title: 'Sound Design Reel' },
   ]
 
   const imageGroups = {
@@ -69,7 +69,7 @@ export default function Media() {
               <div className='media-grid'>
                 {images.map((image, index) => (
                   <Card key={index} className='media-card' onClick={() => openLightbox(image)}>
-                    <img src={image.src} alt={image.alt} className='media-image' />
+                    <img src={image.preview || image.src} alt={image.alt} className='media-image' />
                   </Card>
                 ))}
               </div>

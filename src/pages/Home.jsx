@@ -7,14 +7,14 @@ export default function Home() {
   const featuredProjects = [
     {
       title: 'Touchgrind BMX 2',
-      description: 'Iconic BMX simulation game at Illusion Labs. Led major UI revamp in 2.0 update working closely with lead design, with ownership of the entire redesign task.',
-      tech: ['In-house Engine', 'C++', 'UI'],
+      description: 'Iconic BMX game from Illusion Labs.',
+      tech: ['In-house Engine', 'C++', 'UI/UX'],
       link: 'https://play.google.com/store/apps/details?id=se.illusionlabs.touchgrindbmx2&hl=sv',
     },
     {
       title: 'Touchgrind Scooter',
-      description: 'Trick-based scooter game released at Illusion Labs. Developed with in-house engine using JavaScript and C++.',
-      tech: ['JavaScript', 'C++', 'In-house Engine', 'UI'],
+      description: 'Trick-based scooter game released at Illusion Labs. ',
+      tech: ['In-house Engine', 'JavaScript', 'C++', 'UI/UX'],
       link: 'https://apps.apple.com/se/app/touchgrind-scooter/id1540937835',
     },
   ]
@@ -27,7 +27,7 @@ export default function Home() {
           <div className='hero-content'>
             <div className='hero-text'>
               <h1 className='hero-title'>Christian Thulin Pfeifer</h1>
-              <p className='hero-subtitle'>UI Programmer & Game Developer</p>
+              <p className='hero-subtitle'>UI Programmer | Game Developer</p>
               <p className='hero-description'>Specializing in polished, responsive player experiences with 5+ years of professional experience.</p>
               <a href='/projects' className='cta-button'>
                 View My Work
@@ -44,17 +44,7 @@ export default function Home() {
             {featuredProjects.map((project, index) => (
               <Card key={index} className='project-card'>
                 <h3 className='project-title'>{project.title}</h3>
-                <p className='project-description'>
-                  {project.title === 'Touchgrind BMX 2' ? (
-                    <>
-                      Iconic BMX game from Illusion Labs.
-                      <br />
-                      Led major UI revamp in 2.0 update working closely with lead design, with ownership of the entire redesign task.
-                    </>
-                  ) : (
-                    project.description
-                  )}
-                </p>
+                <p className='project-description'>{project.description}</p>
                 <div className='tech-stack'>
                   {project.tech.map((tech, i) => (
                     <span key={i} className='tech-tag'>
@@ -63,7 +53,7 @@ export default function Home() {
                   ))}
                 </div>
                 <a href={project.link} className='project-link'>
-                  View Project
+                  View Game
                 </a>
               </Card>
             ))}
