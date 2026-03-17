@@ -54,8 +54,8 @@ export default function Projects() {
   return (
     <ContentContainer>
       <div className='projects-container'>
-        <h1 className='projects-title'>My Projects</h1>
-        <p className='projects-subtitle'>A showcase of games and development work</p>
+        <h1 className='projects-title'>Portfolio</h1>
+        <p className='projects-subtitle'>A showcase of games and development work, professional and personal</p>
 
         <div className='projects-grid'>
           {projects.map((project, index) => (

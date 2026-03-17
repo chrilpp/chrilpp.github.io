@@ -41,7 +41,7 @@ export default function AnimatedRoutes() {
             }
           />
           <Route
-            path='/media'
+            path='/gallery'
             element={
               <motion.div variants={pageVariants} initial='initial' animate='animate' exit='exit' transition={pageTransition}>
                 <Media />

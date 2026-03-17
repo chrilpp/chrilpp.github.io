@@ -17,8 +17,8 @@ export default function Navbar() {
           <NavLink to='/projects' className={linkClass}>
             Projects
           </NavLink>
-          <NavLink to='/media' className={linkClass}>
-            Media
+          <NavLink to='/gallery' className={linkClass}>
+            Gallery
           </NavLink>
           <NavLink to='/about' className={linkClass}>
             About

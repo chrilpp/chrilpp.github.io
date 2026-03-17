@@ -39,8 +39,8 @@ export default function Media() {
   return (
     <ContentContainer>
       <div className='media-container'>
-        <h1 className='media-title'>Media</h1>
-        <p className='media-subtitle'>Videos and images from my projects</p>
+        <h1 className='media-title'>Gallery</h1>
+        <p className='media-subtitle'>Visual showcase of game development work and media</p>
 
         {/* Videos Section */}
         <section className='media-section'>

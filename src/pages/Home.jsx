@@ -6,10 +6,10 @@ import './Home.css'
 export default function Home() {
   const featuredProjects = [
     {
-      title: 'Kwartikum',
-      description: 'Sokoban-inspired puzzle adventure with innovative mechanics. Solo-developed in Unity for PC/Steam.',
-      tech: ['Unity', 'C#', 'Game Design'],
-      link: 'https://store.steampowered.com/app/4319030/Kwartikum/',
+      title: 'Touchgrind Scooter',
+      description: 'Trick-based scooter game released at Illusion Labs. Developed with in-house engine using JavaScript and C++.',
+      tech: ['JavaScript', 'C++', 'In-house Engine', 'UI'],
+      link: 'https://play.google.com/store/apps/details?id=se.illusionlabs.touchgrindscooter&hl=sv',
     },
     {
       title: 'Touchgrind BMX 3: Rivals',
@@ -24,17 +24,17 @@ export default function Home() {
       <div className='home-container'>
         {/* Hero Section */}
         <section className='hero-section'>
-          <h1 className='hero-title'>Christian Thulin Pfeifer</h1>
-          <p className='hero-subtitle'>UI Programmer & Game Developer</p>
-          <p className='hero-description'>
-            UI Programmer and game developer with 5+ years of professional experience specializing in polished, responsive player experiences. My primary focus is UI development,
-            though I also work with gameplay systems, animation feel, player feedback, and technical sound design. I have mainly worked in mobile game development, contributing to
-            titles with 300M+ downloads worldwide. Much of my experience is in custom engines, with Unity as my primary tool.
-          </p>
-          <img src='/color-converter-r/CVbild.jpg' alt='Christian Thulin Pfeifer' className='hero-image' />
-          <a href='/projects' className='cta-button'>
-            View My Work
-          </a>
+          <div className='hero-content'>
+            <div className='hero-text'>
+              <h1 className='hero-title'>Christian Thulin Pfeifer</h1>
+              <p className='hero-subtitle'>UI Programmer & Game Developer</p>
+              <p className='hero-description'>Specializing in polished, responsive player experiences with 5+ years of professional experience.</p>
+              <a href='/color-converter-r/projects' className='cta-button'>
+                View My Work
+              </a>
+            </div>
+            <img src='/color-converter-r/CVbild.jpg' alt='Christian Thulin Pfeifer' className='hero-image' />
+          </div>
         </section>
 
         {/* Featured Projects */}
