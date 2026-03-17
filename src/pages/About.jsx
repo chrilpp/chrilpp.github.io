@@ -9,7 +9,7 @@ export default function About() {
       <div className='about-container'>
         <Card className='bio-card'>
           <div className='bio-image-wrapper'>
-            <img src='/color-converter-r/me.png' className='profile-image' width='150' height='150' alt='Christian Thulin Pfeifer' />
+            <img src='/me.png' className='profile-image' width='150' height='150' alt='Christian Thulin Pfeifer' />
           </div>
           <h1 className='about-name'>Christian Thulin Pfeifer</h1>
           <p className='about-bio'>

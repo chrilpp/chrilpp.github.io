@@ -5,7 +5,7 @@ import './App.css'
 
 export default function App() {
   return (
-    <BrowserRouter basename='/color-converter-r'>
+    <BrowserRouter>
       <Navbar />
       <AnimatedRoutes />
     </BrowserRouter>

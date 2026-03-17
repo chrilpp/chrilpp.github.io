@@ -29,11 +29,11 @@ export default function Home() {
               <h1 className='hero-title'>Christian Thulin Pfeifer</h1>
               <p className='hero-subtitle'>UI Programmer & Game Developer</p>
               <p className='hero-description'>Specializing in polished, responsive player experiences with 5+ years of professional experience.</p>
-              <a href='/color-converter-r/projects' className='cta-button'>
+              <a href='/projects' className='cta-button'>
                 View My Work
               </a>
             </div>
-            <img src='/color-converter-r/CVbild.jpg' alt='Christian Thulin Pfeifer' className='hero-image' />
+            <img src='/CVbild.jpg' alt='Christian Thulin Pfeifer' className='hero-image' />
           </div>
         </section>
 
