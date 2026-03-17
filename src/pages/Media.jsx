@@ -7,7 +7,7 @@ export default function Media() {
   const [selectedImage, setSelectedImage] = useState(null)
 
   const images = [
-    { src: '/color-converter-r/logo1.png', alt: 'Project Screenshot 1' },
+    { src: 'https://picsum.photos/400/300?random=1', alt: 'Project Screenshot 1' },
     { src: 'https://picsum.photos/400/300?random=2', alt: 'Project Screenshot 2' },
     { src: 'https://picsum.photos/400/300?random=3', alt: 'Project Screenshot 3' },
     { src: 'https://picsum.photos/400/300?random=4', alt: 'Project Screenshot 4' },
@@ -31,7 +31,7 @@ export default function Media() {
     <ContentContainer>
       <div className='media-container'>
         <h1 className='media-title'>Media Gallery</h1>
-        <p className='media-subtitle'>Screenshots and visuals from my projects</p>
+        <p className='media-subtitle'>Screenshots and visuals</p>
 
         <div className='media-grid'>
           {images.map((image, index) => (
