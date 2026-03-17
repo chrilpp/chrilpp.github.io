@@ -6,18 +6,27 @@ import './Media.css'
 export default function Media() {
   const [selectedImage, setSelectedImage] = useState(null)
 
-  const images = [
-    { src: 'https://picsum.photos/400/300?random=1', alt: 'Project Screenshot 1' },
-    { src: 'https://picsum.photos/400/300?random=2', alt: 'Project Screenshot 2' },
-    { src: 'https://picsum.photos/400/300?random=3', alt: 'Project Screenshot 3' },
-    { src: 'https://picsum.photos/400/300?random=4', alt: 'Project Screenshot 4' },
-    { src: 'https://picsum.photos/400/300?random=5', alt: 'Project Screenshot 5' },
-    { src: 'https://picsum.photos/400/300?random=6', alt: 'Project Screenshot 6' },
-    { src: 'https://picsum.photos/400/300?random=7', alt: 'Project Screenshot 7' },
-    { src: 'https://picsum.photos/400/300?random=8', alt: 'Project Screenshot 8' },
-    { src: 'https://picsum.photos/400/300?random=9', alt: 'Project Screenshot 9' },
-    { src: 'https://picsum.photos/400/300?random=10', alt: 'Project Screenshot 10' },
+  const videos = [
+    { id: 'pEcc_QkSUwU', title: 'Touchgrind BMX 3 Gameplay Preview' },
+    { id: '5fKSqonRlSA', title: 'Touchgrind BMX 2 Trailer' },
+    { id: 'y00MnXtYRAc', title: 'Sound Design Reel' },
+    { id: '1QDnwDiYDkQ', title: 'Touchgrind Scooter Release Trailer' },
+    { id: 'Mq0qSKOfT0g', title: 'Touchgrind BMX 2 – New Location: Heatstroke' },
+    { id: '9GBv3i62hJA', title: 'Way of the Turtle – Part 2 Trailer' },
+    { id: 'xhwgDoVRg6w', title: 'Orb Striker Trailer' },
   ]
+
+  const imageGroups = {
+    Kwartikum: [
+      { src: '/color-converter-r/Kwa1.png', alt: 'Kwartikum Screenshot 1' },
+      { src: '/color-converter-r/Kwa2.png', alt: 'Kwartikum Screenshot 2' },
+    ],
+    'Orb Striker': [
+      { src: '/color-converter-r/Orb1.png', alt: 'Orb Striker Screenshot 1' },
+      { src: '/color-converter-r/Orb2.png', alt: 'Orb Striker Screenshot 2' },
+      { src: '/color-converter-r/Orb3.png', alt: 'Orb Striker Screenshot 3' },
+    ],
+  }
 
   const openLightbox = image => {
     setSelectedImage(image)
@@ -30,16 +39,43 @@ export default function Media() {
   return (
     <ContentContainer>
       <div className='media-container'>
-        <h1 className='media-title'>Media Gallery</h1>
-        <p className='media-subtitle'>Screenshots and visuals</p>
+        <h1 className='media-title'>Media</h1>
+        <p className='media-subtitle'>Videos and images from my projects</p>
 
-        <div className='media-grid'>
-          {images.map((image, index) => (
-            <Card key={index} className='media-card' onClick={() => openLightbox(image)}>
-              <img src={image.src} alt={image.alt} className='media-image' />
-            </Card>
+        {/* Videos Section */}
+        <section className='media-section'>
+          <div className='media-grid'>
+            {videos.map((video, index) => (
+              <Card key={index} className='media-card video-card'>
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.id}`}
+                  title={video.title}
+                  frameBorder='0'
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                  allowFullScreen
+                  className='video-iframe'
+                ></iframe>
+                <h3 className='video-title'>{video.title}</h3>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Images Section */}
+        <section className='media-section'>
+          {Object.entries(imageGroups).map(([projectName, images]) => (
+            <div key={projectName} className='image-group'>
+              <h3 className='project-title'>{projectName}</h3>
+              <div className='media-grid'>
+                {images.map((image, index) => (
+                  <Card key={index} className='media-card' onClick={() => openLightbox(image)}>
+                    <img src={image.src} alt={image.alt} className='media-image' />
+                  </Card>
+                ))}
+              </div>
+            </div>
           ))}
-        </div>
+        </section>
 
         {selectedImage && (
           <div className='lightbox' onClick={closeLightbox}>
