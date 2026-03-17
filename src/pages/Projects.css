@@ -46,9 +46,9 @@
   transition: transform 0.3s;
 }
 
-.project-image img[src*='/color-converter-r/me.png'] {
-  max-height: 100%;
-  max-width: 100%;
+.project-image img[src$='/me.png'] {
+  max-height: 120px;
+  max-width: 120px;
   width: auto;
   height: auto;
   object-fit: contain;

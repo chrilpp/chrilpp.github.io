@@ -6,16 +6,16 @@ import './Home.css'
 export default function Home() {
   const featuredProjects = [
     {
+      title: 'Touchgrind BMX 2',
+      description: 'Iconic BMX simulation game at Illusion Labs. Led major UI revamp in 2.0 update working closely with lead design, with ownership of the entire redesign task.',
+      tech: ['In-house Engine', 'C++', 'UI'],
+      link: 'https://play.google.com/store/apps/details?id=se.illusionlabs.touchgrindbmx2&hl=sv',
+    },
+    {
       title: 'Touchgrind Scooter',
       description: 'Trick-based scooter game released at Illusion Labs. Developed with in-house engine using JavaScript and C++.',
       tech: ['JavaScript', 'C++', 'In-house Engine', 'UI'],
-      link: 'https://play.google.com/store/apps/details?id=se.illusionlabs.touchgrindscooter&hl=sv',
-    },
-    {
-      title: 'Touchgrind BMX 3: Rivals',
-      description: 'Competitive BMX racing game shipped at Illusion Labs. Built in Unity with gameplay systems, UI, and monetization features.',
-      tech: ['Unity', 'C#', 'Game Design'],
-      link: 'https://play.google.com/store/apps/details?id=se.illusionlabs.tgx&hl=sv',
+      link: 'https://apps.apple.com/se/app/touchgrind-scooter/id1540937835',
     },
   ]
 
@@ -44,7 +44,17 @@ export default function Home() {
             {featuredProjects.map((project, index) => (
               <Card key={index} className='project-card'>
                 <h3 className='project-title'>{project.title}</h3>
-                <p className='project-description'>{project.description}</p>
+                <p className='project-description'>
+                  {project.title === 'Touchgrind BMX 2' ? (
+                    <>
+                      Iconic BMX game from Illusion Labs.
+                      <br />
+                      Led major UI revamp in 2.0 update working closely with lead design, with ownership of the entire redesign task.
+                    </>
+                  ) : (
+                    project.description
+                  )}
+                </p>
                 <div className='tech-stack'>
                   {project.tech.map((tech, i) => (
                     <span key={i} className='tech-tag'>

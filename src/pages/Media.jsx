@@ -18,13 +18,13 @@ export default function Media() {
 
   const imageGroups = {
     Kwartikum: [
-      { src: '/color-converter-r/Kwa1.png', alt: 'Kwartikum Screenshot 1' },
-      { src: '/color-converter-r/Kwa2.png', alt: 'Kwartikum Screenshot 2' },
+      { src: 'Kwa1.png', alt: 'Kwartikum Screenshot 1' },
+      { src: 'Kwa2.png', alt: 'Kwartikum Screenshot 2' },
     ],
     'Orb Striker': [
-      { src: '/color-converter-r/Orb1.png', alt: 'Orb Striker Screenshot 1' },
-      { src: '/color-converter-r/Orb2.png', alt: 'Orb Striker Screenshot 2' },
-      { src: '/color-converter-r/Orb3.png', alt: 'Orb Striker Screenshot 3' },
+      { src: 'Orb1.png', alt: 'Orb Striker Screenshot 1' },
+      { src: 'Orb2.png', alt: 'Orb Striker Screenshot 2' },
+      { src: 'Orb3.png', alt: 'Orb Striker Screenshot 3' },
     ],
   }
 
