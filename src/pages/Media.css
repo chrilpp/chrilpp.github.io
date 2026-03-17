@@ -1,66 +1,110 @@
 .media-container {
-  width: 60vmin;
-  height: 60vmin;
-  border-radius: 0.5rem;
-  background-color: #2563eb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.media-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+.media-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-.dot-grid {
+.media-subtitle {
+  font-size: 1.1rem;
+  color: #a0aec0;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.media-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
-.dot-image {
-  width: 3rem;
-  height: 3rem;
+.media-card {
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+}
+
+.media-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.media-card:hover .media-image {
+  transform: scale(1.1);
+}
+
+/* Lightbox styles */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightbox-image {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
-.media-text {
-  color: #ffffff;
+.lightbox-close {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  font-weight: 300;
+  line-height: 1;
+  transition: opacity 0.2s;
 }
 
-.video-grid {
-  display: grid;
-  width: 100vmin;
-  height: auto;
-  margin-top: 3rem;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
+.lightbox-close:hover {
+  opacity: 0.7;
 }
 
-.video-frame {
-  grid-row: 1;
-  width: 100%;
-  border-radius: 0.5rem;
+@media (max-width: 768px) {
+  .media-container {
+    padding: 1rem;
+  }
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-row: initial;
-  height: auto;
-  margin: 0 auto;
-}
+  .media-title {
+    font-size: 2rem;
+  }
 
-.video-inner {
-  aspect-ratio: 16 / 9;
-  height: 85%;
-  overflow: hidden;
-  border-radius: 0.5rem;
-}
+  .media-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
 
-.videoTitle {
-  color: #ffffff;
-  font-size: 1.5rem;
+  .media-image {
+    height: 150px;
+  }
+
+  .lightbox-close {
+    top: 0.5rem;
+  }
 }

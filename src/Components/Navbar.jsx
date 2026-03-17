@@ -8,25 +8,23 @@ export default function Navbar() {
   return (
     <div className='navbar-header'>
       <nav className='navbar-nav'>
-        <section className='left'>
-          <img src='logo3.png' className='boxImage' width='200' height='200' />
-        </section>
+        <section className='left'></section>
 
         <section className='right'>
           <NavLink to='/' className={linkClass} end>
-            Index
+            Home
           </NavLink>
-          <NavLink to='/color-converter' className={linkClass}>
-            Tool: Color Converter
+          <NavLink to='/projects' className={linkClass}>
+            Projects
+          </NavLink>
+          <NavLink to='/media' className={linkClass}>
+            Media
           </NavLink>
           <NavLink to='/about' className={linkClass}>
             About
           </NavLink>
-          <NavLink to='/list' className={linkClass}>
-            Grid-test
-          </NavLink>
-          <NavLink to='/media' className={linkClass}>
-            Vids
+          <NavLink to='/contact' className={linkClass}>
+            Contact
           </NavLink>
         </section>
       </nav>

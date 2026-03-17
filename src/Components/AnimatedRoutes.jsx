@@ -1,19 +1,19 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import Start from '../pages/Start'
+import Home from '../pages/Home'
 import About from '../pages/About'
 import Media from '../pages/Media'
-import SelectList from '../pages/SelectList'
-import ColorConverter from '../pages/ColorConverter'
+import Projects from '../pages/Projects'
+import Contact from '../pages/Contact'
 
 const pageVariants = {
-  initial: { y: '100%', opacity: 0 },
-  animate: { y: '0%', opacity: 1 },
-  exit: { y: '100%', opacity: 0 },
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
 }
 
 const pageTransition = {
-  duration: 0.2,
+  duration: 0.3,
   ease: 'easeInOut',
 }
 
@@ -28,23 +28,15 @@ export default function AnimatedRoutes() {
             path='/'
             element={
               <motion.div variants={pageVariants} initial='initial' animate='animate' exit='exit' transition={pageTransition}>
-                <Start />
+                <Home />
               </motion.div>
             }
           />
           <Route
-            path='/start'
+            path='/projects'
             element={
               <motion.div variants={pageVariants} initial='initial' animate='animate' exit='exit' transition={pageTransition}>
-                <Start />
-              </motion.div>
-            }
-          />
-          <Route
-            path='/about'
-            element={
-              <motion.div variants={pageVariants} initial='initial' animate='animate' exit='exit' transition={pageTransition}>
-                <About />
+                <Projects />
               </motion.div>
             }
           />
@@ -57,18 +49,18 @@ export default function AnimatedRoutes() {
             }
           />
           <Route
-            path='/color-converter'
+            path='/about'
             element={
               <motion.div variants={pageVariants} initial='initial' animate='animate' exit='exit' transition={pageTransition}>
-                <ColorConverter />
+                <About />
               </motion.div>
             }
           />
           <Route
-            path='/list'
+            path='/contact'
             element={
               <motion.div variants={pageVariants} initial='initial' animate='animate' exit='exit' transition={pageTransition}>
-                <SelectList />
+                <Contact />
               </motion.div>
             }
           />
