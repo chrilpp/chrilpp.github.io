@@ -22,6 +22,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
+  align-items: start;
 }
 
 .project-card {
@@ -96,8 +97,55 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   justify-content: center;
+}
+
+.project-contribution {
+  margin: 0;
+  width: 100%;
+}
+
+.project-contribution-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  color: #cbd5e0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: rgba(100, 116, 139, 0.15);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+  padding: 0.35rem 0.75rem;
+  list-style: none;
+  margin-top: 0.25rem;
+}
+
+.project-contribution-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.project-contribution[open] .project-contribution-toggle {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.45);
+}
+
+.project-contribution-list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+  color: #a0aec0;
+  line-height: 1.5;
+  text-align: left;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.project-contribution-item {
+  margin-bottom: 0.35rem;
+  text-align: left;
 }
 
 .tech-tag {
