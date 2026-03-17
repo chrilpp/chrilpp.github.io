@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import ContentContainer from '../Components/ContentContainer.jsx'
 import Card from '../Components/Card.jsx'
 import './Home.css'
@@ -29,9 +30,10 @@ export default function Home() {
               <h1 className='hero-title'>Christian Thulin Pfeifer</h1>
               <p className='hero-subtitle'>UI Programmer | Game Developer</p>
               <p className='hero-description'>Specializing in polished, responsive player experiences with 5+ years of professional experience.</p>
-              <a href='/projects' className='cta-button'>
+              <p className='hero-highlight'>Contributed to titles with a combined 300M+ downloads worldwide.</p>
+              <Link to='/projects' className='cta-button'>
                 View My Work
-              </a>
+              </Link>
             </div>
             <img src='/CVbild.jpg' alt='Christian Thulin Pfeifer' className='hero-image' />
           </div>

@@ -20,9 +20,6 @@ export default function Navbar() {
           <NavLink to='/gallery' className={linkClass}>
             Gallery
           </NavLink>
-          <NavLink to='/about' className={linkClass}>
-            About
-          </NavLink>
           <NavLink to='/contact' className={linkClass}>
             Contact
           </NavLink>

@@ -1,7 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import Home from '../pages/Home'
-import About from '../pages/About'
 import Media from '../pages/Media'
 import Projects from '../pages/Projects'
 import Contact from '../pages/Contact'
@@ -45,14 +44,6 @@ export default function AnimatedRoutes() {
             element={
               <motion.div variants={pageVariants} initial='initial' animate='animate' exit='exit' transition={pageTransition}>
                 <Media />
-              </motion.div>
-            }
-          />
-          <Route
-            path='/about'
-            element={
-              <motion.div variants={pageVariants} initial='initial' animate='animate' exit='exit' transition={pageTransition}>
-                <About />
               </motion.div>
             }
           />
