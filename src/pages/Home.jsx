@@ -15,7 +15,7 @@ export default function Home() {
       title: 'Touchgrind BMX 3: Rivals',
       description: 'Competitive BMX racing game shipped at Illusion Labs. Built in Unity with gameplay systems, UI, and monetization features.',
       tech: ['Unity', 'C#', 'Game Design'],
-      link: '#',
+      link: 'https://play.google.com/store/apps/details?id=se.illusionlabs.tgx&hl=sv',
     },
   ]
 
