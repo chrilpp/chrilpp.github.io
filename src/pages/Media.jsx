@@ -21,11 +21,6 @@ export default function Media() {
       { src: 'Kwa1.png', alt: 'Kwartikum Screenshot 1' },
       { src: 'Kwa2.png', alt: 'Kwartikum Screenshot 2' },
     ],
-    'Orb Striker': [
-      { src: 'Orb1.png', alt: 'Orb Striker Screenshot 1' },
-      { src: 'Orb2.png', alt: 'Orb Striker Screenshot 2' },
-      { src: 'Orb3.png', alt: 'Orb Striker Screenshot 3' },
-    ],
   }
 
   const openLightbox = image => {
@@ -55,7 +50,6 @@ export default function Media() {
                   allowFullScreen
                   className='video-iframe'
                 ></iframe>
-                <h3 className='video-title'>{video.title}</h3>
               </Card>
             ))}
           </div>
